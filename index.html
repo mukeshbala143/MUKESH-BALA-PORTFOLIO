@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mukesh Bala — UI/UX Designer & Full Stack Developer. CS undergraduate building AI-powered, full-stack, and real-world software.">
+  <title>Mukesh Bala</title>
+
+  <!-- Fonts: Clash Display + Cabinet Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NOISE TEXTURE OVERLAY -->
+  <div class="noise"></div>
+
+  <!-- MAGNETIC CURSOR -->
+  <div class="cursor" id="cursor"><div class="cursor-dot"></div></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- LOADING SCREEN -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <span class="loader-name">MB</span>
+      <div class="loader-bar"><div class="loader-fill" id="loaderFill"></div></div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ NAV ═══════════════════ -->
+  <nav class="nav" id="mainNav">
+    <a href="#home" class="nav-logo">
+      <span class="logo-mark">M</span><span class="logo-text">ukesh Bala</span>
+    </a>
+    <div class="nav-links">
+      <a href="#about"    class="nav-link">About</a>
+      <a href="#work"     class="nav-link">Work</a>
+      <a href="#certs"    class="nav-link">Certs</a>
+      <a href="#contact"  class="nav-link">Contact</a>
+    </div>
+    <a href="Resume.pdf" download class="nav-cta">
+      <i class="fas fa-arrow-down"></i> Resume
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about"   class="mm-link" onclick="closeMobileMenu()">About</a>
+    <a href="#work"    class="mm-link" onclick="closeMobileMenu()">Work</a>
+    <a href="#certs"   class="mm-link" onclick="closeMobileMenu()">Certs</a>
+    <a href="#contact" class="mm-link" onclick="closeMobileMenu()">Contact</a>
+    <a href="Resume.pdf" download class="mm-cta">Download Resume</a>
+  </div>
+
+  <!-- ═══════════════════ HERO ═══════════════════ -->
+  <section id="home" class="hero">
+    <div class="hero-bg">
+      <div class="hero-orb o1"></div>
+      <div class="hero-orb o2"></div>
+      <div class="hero-grid"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="pulse-ring"></span>
+        <span>Available for opportunities</span>
+      </div>
+
+      <h1 class="hero-h1">
+        <span class="line-wrap"><span class="reveal-line">Mukesh</span></span>
+        <span class="line-wrap"><span class="reveal-line delay-1">Bala<span class="hero-dot">.</span></span></span>
+      </h1>
+
+      <div class="hero-sub-row">
+        <div class="hero-role-pill">
+          <span class="role-icon">✦</span>
+          <span>UI/UX Designer &amp; Full Stack Developer</span>
+        </div>
+        <p class="hero-tagline">
+          CS undergraduate crafting AI-powered software,<br>modern interfaces &amp; scalable backends.
+        </p>
+      </div>
+
+      <div class="hero-ctas">
+        <a href="#work" class="btn-gold">
+          See My Work <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="#contact" class="btn-outline">
+          Let's Talk
+        </a>
+      </div>
+
+      <div class="hero-socials">
+        <a href="https://github.com/mukeshbala143"           target="_blank" rel="noopener" class="social-pill"><i class="fab fa-github"></i><span>GitHub</span></a>
+        <a href="https://www.linkedin.com/in/mukeshbala143"  target="_blank" rel="noopener" class="social-pill"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
+        <a href="https://www.figma.com/@mukeshdesign"        target="_blank" rel="noopener" class="social-pill"><i class="fab fa-figma"></i><span>Figma</span></a>
+        <a href="https://dribbble.com/mukesh-bala"           target="_blank" rel="noopener" class="social-pill"><i class="fab fa-dribbble"></i><span>Dribbble</span></a>
+      </div>
+    </div>
+
+    <div class="hero-marquee-wrap">
+      <div class="hero-marquee">
+        <span>Full Stack Dev</span><span class="sep">✦</span>
+        <span>UI/UX Design</span><span class="sep">✦</span>
+        <span>Machine Learning</span><span class="sep">✦</span>
+        <span>Cloud &amp; AWS</span><span class="sep">✦</span>
+        <span>Python &amp; Java</span><span class="sep">✦</span>
+        <span>React &amp; Node</span><span class="sep">✦</span>
+        <span>Full Stack Dev</span><span class="sep">✦</span>
+        <span>UI/UX Design</span><span class="sep">✦</span>
+        <span>Machine Learning</span><span class="sep">✦</span>
+        <span>Cloud &amp; AWS</span><span class="sep">✦</span>
+        <span>Python &amp; Java</span><span class="sep">✦</span>
+        <span>React &amp; Node</span><span class="sep">✦</span>
+      </div>
+    </div>
+
+    <div class="scroll-cue">
+      <div class="scroll-line-anim"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ ABOUT ═══════════════════ -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-left">
+          <p class="section-label">// About Me</p>
+          <h2 class="section-h2">
+            Building software<br>
+            that <em>actually</em><br>
+            matters.
+          </h2>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-n" data-count="17">0</span><span class="stat-plus">+</span>
+              <p>Certifications</p>
+            </div>
+            <div class="stat">
+              <span class="stat-n" data-count="10">0</span><span class="stat-plus">+</span>
+              <p>Projects</p>
+            </div>
+            <div class="stat">
+              <span class="stat-n" data-count="3">0</span><span class="stat-plus">+</span>
+              <p>Hackathons</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-right">
+          <p class="about-body">
+            I'm a <strong>Computer Science undergraduate</strong> passionate about building practical software using programming, Web Development, and AI technologies.
+          </p>
+          <p class="about-body">
+            I work mainly with <strong>Java, Python, JavaScript</strong> — developing full-stack applications and machine learning systems. Projects like <strong>AI Resume Parser, Car Price Predictor, Bus Tracking App</strong>, and a <strong>Java E-commerce Platform</strong> have shaped my engineering mindset.
+          </p>
+          <p class="about-body">
+            I'm continuously leveling up in <strong>software development, ML, databases, and cloud technologies</strong> — always building toward production-ready, real-world impact.
+          </p>
+
+          <div class="about-focus">
+            <div class="focus-item"><i class="fas fa-robot"></i> AI-Driven Systems</div>
+            <div class="focus-item"><i class="fas fa-cloud"></i> Cloud Infrastructure</div>
+            <div class="focus-item"><i class="fas fa-mobile-screen"></i> Mobile Development</div>
+            <div class="focus-item"><i class="fas fa-gear"></i> Python Automation</div>
+          </div>
+
+          <div class="tech-stack">
+            <span>Java</span><span>Python</span><span>JavaScript</span><span>React</span>
+            <span>Node.js</span><span>MySQL</span><span>MongoDB</span><span>AWS</span>
+            <span>Git</span><span>Figma</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ WORK / PROJECTS ═══════════════════ -->
+  <section id="work" class="section work-section">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-label">// Featured Work</p>
+        <h2 class="section-h2">Selected <em>Projects</em></h2>
+      </div>
+
+      <div class="work-list">
+
+        <div class="work-item" data-project="cart">
+          <div class="wi-number">01</div>
+          <div class="wi-body">
+            <div class="wi-top">
+              <span class="wi-tag">Full Stack</span>
+              <div class="wi-arrow"><i class="fas fa-arrow-up-right"></i></div>
+            </div>
+            <h3 class="wi-title">E-Commerce in Java</h3>
+            <p class="wi-desc">MVC-based full-stack e-commerce app with Java Servlets, JSP &amp; MySQL — user auth, cart, checkout &amp; order management.</p>
+            <div class="wi-tech"><span>Java</span><span>Servlet</span><span>JSP</span><span>MySQL</span></div>
+          </div>
+        </div>
+
+        <div class="work-item" data-project="crop">
+          <div class="wi-number">02</div>
+          <div class="wi-body">
+            <div class="wi-top">
+              <span class="wi-tag">Web App</span>
+              <div class="wi-arrow"><i class="fas fa-arrow-up-right"></i></div>
+            </div>
+            <h3 class="wi-title">SMART-KISHAN</h3>
+            <p class="wi-desc">Smart agriculture platform for farmers — real-time crop insights, farm management tools &amp; data-driven recommendations.</p>
+            <div class="wi-tech"><span>Node.js</span><span>MongoDB</span><span>JavaScript</span></div>
+          </div>
+        </div>
+
+        <div class="work-item" data-project="car">
+          <div class="wi-number">03</div>
+          <div class="wi-body">
+            <div class="wi-top">
+              <span class="wi-tag">Machine Learning</span>
+              <div class="wi-arrow"><i class="fas fa-arrow-up-right"></i></div>
+            </div>
+            <h3 class="wi-title">Car Price Predictor</h3>
+            <p class="wi-desc">Regression ML model predicting used car prices from historical data — trained in Python, serialized with Pickle for web deployment.</p>
+            <div class="wi-tech"><span>Python</span><span>Scikit-learn</span><span>Flask</span></div>
+          </div>
+        </div>
+
+        <div class="work-item" data-project="farm">
+          <div class="wi-number">04</div>
+          <div class="wi-body">
+            <div class="wi-top">
+              <span class="wi-tag">AI / ML</span>
+              <div class="wi-arrow"><i class="fas fa-arrow-up-right"></i></div>
+            </div>
+            <h3 class="wi-title">Crop Recommendation System</h3>
+            <p class="wi-desc">ML system analyzing soil &amp; climate parameters (N, P, K, pH, rainfall) to recommend the optimal crop for cultivation.</p>
+            <div class="wi-tech"><span>Python</span><span>ML</span><span>Flask</span><span>HTML</span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="work-cta-row">
+        <a href="projects.html" class="btn-ghost">
+          View All Projects <i class="fas fa-grid-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECT MODAL -->
+  <div class="pmodal-overlay" id="pModalOverlay">
+    <div class="pmodal" id="pModal">
+      <button class="pmodal-close" id="pModalClose"><i class="fas fa-xmark"></i></button>
+      <div class="pmodal-tag" id="pmTag"></div>
+      <h2 class="pmodal-title" id="pmTitle"></h2>
+      <p class="pmodal-short" id="pmShort"></p>
+      <p class="pmodal-long" id="pmLong"></p>
+      <div class="pmodal-tech-label">Tech Stack</div>
+      <div class="pmodal-tech" id="pmTech"></div>
+      <a class="pmodal-gh" id="pmLink" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i> View on GitHub
+      </a>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ CERTIFICATIONS CAROUSEL ═══════════════════ -->
+  <section id="certs" class="section certs-section">
+    <div class="container-title-certs">
+      <p class="section-label">// Achievements &amp; Certifications</p>
+      <h2 class="section-h2">17 Milestones<br>&amp; <em>Counting</em></h2>
+      <p class="certs-sub">Drag to explore — <span class="drag-hint-text"><i class="fas fa-hand-pointer"></i> rotate the gallery</span></p>
+    </div>
+
+    <div class="carousel-wrapper">
+      <div class="void-container" id="drag-container">
+        <div class="carousel-pivot" id="pivot">
+
+          <div class="gc" style="--i:1;  --clr:#c084fc;" onclick="openCertModal(0)">
+            <div class="gc-inner">
+              <div class="gc-icon"><i class="fas fa-star"></i></div>
+              <span class="gc-cat">WEB DEV</span>
+              <h3>React Portfolio Bootcamp</h3>
+              <p>DevTown × Microsoft</p>
+              <div class="gc-bar"></div>
+            </div>
+          </div>
+
+          <div class="gc" style="--i:2;  --clr:#60a5fa;" onclick="openCertModal(1)">
+            <div class="gc-inner">
+              <div class="gc-icon"><i class="fas fa-star"></i></div>
+              <span class="gc-cat">HACKATHON</span>
+              <h3>Smart India Hackathon</h3>
+              <p>GIET University</p>
+              <div class="gc-bar"></div>
+            </div>
+          </div>
+
+          <div class="gc" style="--i:3;  --clr:#f87171;" onclick="openCertModal(2)">
+            <div class="gc-inner">
+              <div class="gc-icon"><i class="fas fa-star"></i></div>
+              <span class="gc-cat">PROGRAMMING</span>
+              <h3>C++ and SQL</h3>
+              <p>Data Infotech</p>
+              <div class="gc-bar"></div>
+            </div>
+          </div>
+
+          <div class="gc" style="--i:4;  --clr:#38bdf8;" onclick="openCertModal(3)">
+            <div class="gc-inner">
+              <div class="gc-icon"><i class="fas fa-star"></i></div>
+              <span class="gc-cat">CYBER SECURITY</span>
+              <h3>Cyber Security Workshop</h3>
+              <p>Cyberyaan × GIET</p>
+              <div class="gc-bar"></div>
+            </div>
+          </div>
+
+          <div class="gc" style="--i:5;  --clr:#fb923c;" onclick="openCertModal(4)">
+            <div class="gc-inner">
+              <div class="gc-icon"><i class="fas fa-star"></i></div>
+              <span class="gc-cat">HACKATHON</span>
+              <h3>Hacknovation 2.0</h3>
+              <p>GIET University</p>
+              <div class="gc-bar"></div>
+            </div>
+          </div>
+
+          <div class="gc" style="--i:6;  --clr:#f97316;" onclick="openCertModal(5)">
+            <div class="gc-inner">
+              <div class="gc-icon"><i class="fas fa-star"></i></div>
+              <span class="gc-cat">AI / CLOUD</span>
+              <h3>Oracle Cloud AI Foundations</h3>
+              <p>Oracle University</p>
+              <div class="gc-bar"></div>
+            </div>
+          </div>
+
+          <div class="gc" style="--i:7;  --clr:#fbbf24;" onclick="openCertModal(6)">
+            <div class="gc-inner">
+              <div class="gc-icon"><i class="fas fa-star"></i></div>
+              <span class="gc-cat">IOT</span>
+              <h3>Industry 4.0 &amp; IIoT</h3>
+              <p>NPTEL</p>
+              <div class="gc-bar"></div>
+            </div>
+          </div>
+
+          <div class="gc" style="--i:8;  --clr:#4ade80;" onclick="openCertModal(7)">
+            <div class="gc-inner">
+              <div class="gc-icon"><i class="fas fa-star"></i></div>
+              <span class="gc-cat">PYTHON</span>
+              <h3>Joy of Computing Python</h3>
+              <p>NPTEL</p>
+              <div class="gc-bar"></div>
+            </div>
+          </div>
+
+          <div class="gc" style="--i:9;  --clr:#e879f9;" onclick="openCertModal(8)">
+            <div class="gc-inner">
+              <div class="gc-icon"><i class="fas fa-star"></i></div>
+              <span class="gc-cat">PROJECT</span>
+              <h3>Projectathon — 1st Prize</h3>
+              <p>GIET University</p>
+              <div class="gc-bar"></div>
+            </div>
+          </div>
+
+          <div class="gc" style="--i:10; --clr:#2dd4bf;" onclick="openCertModal(9)">
+            <div class="gc-inner">
+              <div class="gc-icon"><i class="fas fa-star"></i></div>
+              <span class="gc-cat">INTERNSHIP</span>
+              <h3>Industry Exposure Internship</h3>
+              <p>HeloBale Academy</p>
+              <div class="gc-bar"></div>
+            </div>
+          </div>
+
+          <div class="gc" style="--i:11; --clr:#22d3ee;" onclick="openCertModal(10)">
+            <div class="gc-inner">
+              <div class="gc-icon"><i class="fas fa-star"></i></div>
+              <span class="gc-cat">DATA ANALYTICS</span>
+              <h3>Remote Sensing Analytics</h3>
+              <p>ISRO — IIRS</p>
+              <div class="gc-bar"></div>
+            </div>
+          </div>
+
+          <div class="gc" style="--i:12; --clr:#f59e0b;" onclick="openCertModal(11)">
+            <div class="gc-inner">
+              <div class="gc-icon"><i class="fas fa-star"></i></div>
+              <span class="gc-cat">CLOUD</span>
+              <h3>AWS Developer Training</h3>
+              <p>Infosys Springboard</p>
+              <div class="gc-bar"></div>
+            </div>
+          </div>
+
+          <div class="gc" style="--i:13; --clr:#818cf8;" onclick="openCertModal(12)">
+            <div class="gc-inner">
+              <div class="gc-icon"><i class="fas fa-star"></i></div>
+              <span class="gc-cat">BUSINESS</span>
+              <h3>Intro to Corporate Actions</h3>
+              <p>TCS iON</p>
+              <div class="gc-bar"></div>
+            </div>
+          </div>
+
+          <div class="gc" style="--i:14; --clr:#f43f5e;" onclick="openCertModal(13)">
+            <div class="gc-inner">
+              <div class="gc-icon"><i class="fas fa-star"></i></div>
+              <span class="gc-cat">PROGRAMMING</span>
+              <h3>Python + MySQL Internship</h3>
+              <p>GIET University</p>
+              <div class="gc-bar"></div>
+            </div>
+          </div>
+
+          <div class="gc" style="--i:15; --clr:#ec4899;" onclick="openCertModal(14)">
+            <div class="gc-inner">
+              <div class="gc-icon"><i class="fas fa-star"></i></div>
+              <span class="gc-cat">DATA SCIENCE</span>
+              <h3>Data Science 101</h3>
+              <p>IBM SkillsBuild</p>
+              <div class="gc-bar"></div>
+            </div>
+          </div>
+
+          <div class="gc" style="--i:16; --clr:#34d399;" onclick="openCertModal(15)">
+            <div class="gc-inner">
+              <div class="gc-icon"><i class="fas fa-star"></i></div>
+              <span class="gc-cat">DATA ANALYTICS</span>
+              <h3>Data Analytics Simulation</h3>
+              <p>Deloitte (Forage)</p>
+              <div class="gc-bar"></div>
+            </div>
+          </div>
+
+          <div class="gc" style="--i:17; --clr:#a3e635;" onclick="openCertModal(16)">
+            <div class="gc-inner">
+              <div class="gc-icon"><i class="fas fa-star"></i></div>
+              <span class="gc-cat">DESIGN &amp; UX</span>
+              <h3>UX Design Foundations</h3>
+              <p>Google (Coursera)</p>
+              <div class="gc-bar"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERT MODAL -->
+  <div class="cert-overlay" id="certOverlay" onclick="handleCertOverlay(event)">
+    <div class="cert-modal" id="certModal">
+      <div class="cm-bar" id="cmBar"></div>
+      <div class="cm-body">
+        <div class="cm-head">
+          <div class="cm-meta">
+            <span class="cm-cat"  id="cmCat"></span>
+            <h3 class="cm-title" id="cmTitle"></h3>
+            <p  class="cm-prov"  id="cmProv"></p>
+          </div>
+          <button class="cm-close" onclick="closeCertModal()"><i class="fas fa-xmark"></i></button>
+        </div>
+        <p class="cm-desc" id="cmDesc"></p>
+        <div class="cm-tech-label">Technologies</div>
+        <div class="cm-tags" id="cmTags"></div>
+        <div class="cm-footer" id="cmFooter"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ CONTACT ═══════════════════ -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <div class="contact-left">
+          <p class="section-label">// Contact</p>
+          <h2 class="section-h2">
+            Got a project<br>in mind?<br><em>Let's build.</em>
+          </h2>
+          <p class="contact-sub">Whether it's a project, job opportunity, or collaboration — reach out anytime.</p>
+
+          <div class="contact-info-list">
+            <a href="mailto:mukeshbala95133@gmail.com" class="cil-item">
+              <div class="cil-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <span class="cil-label">Email</span>
+                <span class="cil-val">mukeshbala95133@gmail.com</span>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/mukeshbala143" target="_blank" class="cil-item">
+              <div class="cil-icon"><i class="fab fa-linkedin"></i></div>
+              <div>
+                <span class="cil-label">LinkedIn</span>
+                <span class="cil-val">linkedin.com/in/mukeshbala143</span>
+              </div>
+            </a>
+            <a href="https://github.com/mukeshbala143" target="_blank" class="cil-item">
+              <div class="cil-icon"><i class="fab fa-github"></i></div>
+              <div>
+                <span class="cil-label">GitHub</span>
+                <span class="cil-val">github.com/mukeshbala143</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-right">
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="cf-group">
+              <label class="cf-label">Your Name</label>
+              <input type="text"  class="cf-input" id="cfName"    placeholder="Rahul Sharma" autocomplete="name" required>
+            </div>
+            <div class="cf-group">
+              <label class="cf-label">Email Address</label>
+              <input type="email" class="cf-input" id="cfEmail"   placeholder="rahul@example.com" autocomplete="email" required>
+            </div>
+            <div class="cf-group">
+              <label class="cf-label">Subject</label>
+              <input type="text"  class="cf-input" id="cfSubject" placeholder="Project Collaboration / Job Offer / Hi!">
+            </div>
+            <div class="cf-group">
+              <label class="cf-label">Message</label>
+              <textarea class="cf-input cf-textarea" id="cfMessage" placeholder="Tell me about your project or opportunity..." required></textarea>
+            </div>
+
+            <!-- Honeypot for spam prevention -->
+            <input type="checkbox" name="botcheck" style="display:none">
+
+            <button type="submit" class="cf-submit" id="cfSubmit">
+              <span id="cfBtnText"><i class="fas fa-paper-plane"></i> Send Message</span>
+              <span id="cfBtnLoad" style="display:none"><i class="fas fa-circle-notch fa-spin"></i> Sending...</span>
+            </button>
+
+            <div class="cf-success" id="cfSuccess" style="display:none">
+              <i class="fas fa-circle-check"></i>
+              <span>Message sent! I'll reply within 24 hours.</span>
+            </div>
+
+            <div class="cf-error" id="cfError" style="display:none">
+              <i class="fas fa-triangle-exclamation"></i>
+              <span id="cfErrorMsg">Something went wrong. Try emailing directly.</span>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ FOOTER ═══════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-left">
+          <p class="footer-name">Mukesh Bala</p>
+          <p class="footer-sub">UI/UX Designer &amp; Full Stack Developer</p>
+        </div>
+        <div class="footer-socials">
+          <a href="https://github.com/mukeshbala143"          target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/mukeshbala143" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.figma.com/@mukeshdesign"       target="_blank" rel="noopener"><i class="fab fa-figma"></i></a>
+          <a href="https://dribbble.com/mukesh-bala"          target="_blank" rel="noopener"><i class="fab fa-dribbble"></i></a>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <p>© 2026 Mukesh Bala — All rights reserved.</p>
+        <p>Crafted with HTML · CSS · JS</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
