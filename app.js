@@ -247,9 +247,9 @@ const projectData = {
   portfolio: {
     tag:   'Web App',
     title: 'My Portfolio Website',
-    short: 'This portfolio — dark luxury editorial design.',
-    long:  'Built from scratch with pure HTML, CSS & JavaScript. Features custom cursor, loader animation, 3D rotating certification carousel, project modals, real email via Web3Forms, scroll reveal animations, and a fully responsive layout.',
-    tech:  ['HTML5','CSS3','JavaScript','Web3Forms','3D CSS Transforms'],
+    short: 'Modern responsive portfolio with clean UI and smooth interactions.',
+    long:  'Built using React and Vite with Tailwind CSS for a fast, scalable, and responsive experience. Showcases projects, skills, certifications, and contact features with smooth animations, interactive components, and optimized performance.',
+    tech:  ['React','Vite','Tailwind CSS','JavaScript','Responsive Design'],
     link:  'https://github.com/mukeshbala143/portfolio_by_mukesh.git'
   },
   cyraAnalytics: {
@@ -259,7 +259,16 @@ const projectData = {
     long:  'Comprehensive analytics platform with real-time charts, filterable data tables, and exportable reports. Designed for business intelligence and informed decision-making support.',
     tech:  ['Python','Flask','Chart.js','MySQL','Data Visualization'],
     link:  'https://github.com/mukeshbala143/Cyra-Analytics.git'
-  }
+  },
+  portfolio: {
+    tag:   'Mukesh Bala Portfolio',
+    title: 'My Portfolio Website',
+    short: 'This portfolio — dark luxury editorial design.',
+    long:  'Built from scratch with pure HTML, CSS & JavaScript. Features custom cursor, loader animation, 3D rotating certification carousel, project modals, real email via Web3Forms, scroll reveal animations, and a fully responsive layout.',
+    tech:  ['HTML','CSS','JavaScript','Web3Forms','3D CSS Transforms'],
+    link:  'https://github.com/mukeshbala143/MUKESH-BALA-PORTFOLIO.git'
+}
+
 };
 
 const pModalOverlay = document.getElementById('pModalOverlay');
