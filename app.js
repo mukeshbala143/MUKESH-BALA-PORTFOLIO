@@ -430,7 +430,7 @@ const certsData = [
     description:'Awarded 1st prize for delivering an innovative project with technical excellence, creative problem solving, and impactful presentation to faculty and industry judges.',
     technologies:['Project Development','Presentation','Innovation','Teamwork'], linkedinUrl:'https://www.linkedin.com/posts/activity-7373561680045203456-gMYb?utm_source=share&utm_medium=member_desktop&rcm=ACoAADnzwmEBlPSGS1jS2pZ2OA4hy6uQAA6S4wE' },
 
-  { category:'INTERNSHIP', title:'Industry Exposure Program Internship', provider:'HeloBale Academy', color:'#2dd4bf',
+  { category:'INTERNSHIP', title:'Industry Exposure Program Internship', provider:'Hebble Academy', color:'#2dd4bf',
     description:'Virtual internship with hands-on experience in Python development, AWS services, Git version control workflows, and cloud-based project deployment.',
     technologies:['Python','AWS','Git','Cloud','Linux','CI/CD'], linkedinUrl:'https://www.linkedin.com/posts/activity-7358041139960049664-MOup?utm_source=share&utm_medium=member_desktop&rcm=ACoAADnzwmEBlPSGS1jS2pZ2OA4hy6uQAA6S4wE' },
 
