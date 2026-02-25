@@ -267,6 +267,14 @@ const projectData = {
     long:  'Built from scratch with pure HTML, CSS & JavaScript. Features custom cursor, loader animation, 3D rotating certification carousel, project modals, real email via Web3Forms, scroll reveal animations, and a fully responsive layout.',
     tech:  ['HTML','CSS','JavaScript','Web3Forms','3D CSS Transforms'],
     link:  'https://github.com/mukeshbala143/MUKESH-BALA-PORTFOLIO.git'
+},
+  amazon: {
+    tag:   'Amazon ML Challenge',
+    title: 'Amazon Product Recommendation System',
+    short: 'ML model for Amazon product recommendation engine.',
+    long:  'Developed a machine learning recommendation system for Amazon products using collaborative filtering and deep learning techniques. The model analyzes user behavior and product attributes to suggest relevant products.',
+    tech:  ['Python','TensorFlow','Pandas','Scikit-learn','Data Analysis'],
+    link:  'https://github.com/mukeshbala143/AMAZON-PROJECT.git'
 }
 
 };
