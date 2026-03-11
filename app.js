@@ -275,6 +275,14 @@ const projectData = {
     long:  'Developed a machine learning recommendation system for Amazon products using collaborative filtering and deep learning techniques. The model analyzes user behavior and product attributes to suggest relevant products.',
     tech:  ['Python','TensorFlow','Pandas','Scikit-learn','Data Analysis'],
     link:  'https://github.com/mukeshbala143/AMAZON-PROJECT.git'
+},
+  cartify: {
+    tag:   'E-Commerce Project',
+    title: 'Cartify – E-Commerce Platform',
+    short: 'Full-stack e-commerce web application.',
+    long:  'Cartify is a full-stack e-commerce web application where users can browse products, add items to cart, manage orders, and authenticate securely. Built with modern technologies to provide a smooth and responsive online shopping experience.',
+    tech:  ['React','Node.js','Express','MongoDB','JWT'],
+    link:  'https://github.com/mukeshbala143/Cartify.git'
 }
 
 };
