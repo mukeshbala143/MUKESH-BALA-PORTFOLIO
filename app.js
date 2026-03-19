@@ -9,15 +9,13 @@
    ✅ Cert popup modal
    ✅ Real email via Web3Forms (mukeshbala95133@gmail.com)
    ✅ Scroll reveal
+   ✅ Mobile swipe carousel for certs
    ================================================================ */
 
 /* ────────────────────────────────────────
    WEB3FORMS KEY
-   Get yours FREE at https://web3forms.com
-   Enter: mukeshbala95133@gmail.com → Create Access Key
    ──────────────────────────────────────── */
 const WEB3_KEY = 'e93cc678-22dd-4225-be9c-2eb79df19736';
-// ↑ Replace with key from web3forms.com
 
 
 /* ════════════════════════════════════════
@@ -36,7 +34,6 @@ window.addEventListener('load', () => {
       clearInterval(interval);
       setTimeout(() => {
         loader.classList.add('hidden');
-        // Trigger hero animations
         document.querySelectorAll('.reveal-line').forEach(el => {
           el.style.animationPlayState = 'running';
         });
@@ -64,7 +61,6 @@ window.addEventListener('load', () => {
     cursor.style.top  = cy + 'px';
   });
 
-  // Smooth follower
   function animFollower() {
     fx += (cx - fx) * 0.1;
     fy += (cy - fy) * 0.1;
@@ -74,7 +70,6 @@ window.addEventListener('load', () => {
   }
   animFollower();
 
-  // Grow on hover over links/buttons
   document.querySelectorAll('a, button, .work-item, .gc, .cf-submit, .social-pill, .nav-cta').forEach(el => {
     el.addEventListener('mouseenter', () => {
       follower.style.width  = '60px';
@@ -129,7 +124,6 @@ if (navToggle) {
   });
 }
 
-// Smooth scroll for all anchor links
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', (e) => {
     const href = a.getAttribute('href');
@@ -150,7 +144,6 @@ function animateCounter(el, target, duration = 1800) {
   const step = (timestamp) => {
     if (!start) start = timestamp;
     const progress = Math.min((timestamp - start) / duration, 1);
-    // Ease out quart
     const eased = 1 - Math.pow(1 - progress, 4);
     el.textContent = Math.floor(eased * target);
     if (progress < 1) requestAnimationFrame(step);
@@ -192,7 +185,6 @@ document.querySelectorAll('.work-item, .cil-item, .focus-item, .tech-stack span,
   revealObs.observe(el);
 });
 
-// Add visible class styles via JS (since we use inline styles)
 document.addEventListener('DOMContentLoaded', () => {
   const style = document.createElement('style');
   style.textContent = '.visible { opacity:1 !important; transform:translateY(0) !important; }';
@@ -245,12 +237,28 @@ const projectData = {
     link:  'https://github.com/mukeshbala143/AI-PATIENT-FLOW.git'
   },
   portfolio: {
-    tag:   'Web App',
+    tag:   'Mukesh Bala Portfolio',
     title: 'My Portfolio Website',
-    short: 'Modern responsive portfolio with clean UI and smooth interactions.',
-    long:  'Built using React and Vite with Tailwind CSS for a fast, scalable, and responsive experience. Showcases projects, skills, certifications, and contact features with smooth animations, interactive components, and optimized performance.',
-    tech:  ['React','Vite','Tailwind CSS','JavaScript','Responsive Design'],
-    link:  'https://github.com/mukeshbala143/portfolio_by_mukesh.git'
+    short: 'This portfolio — dark luxury editorial design.',
+    long:  'Built from scratch with pure HTML, CSS & JavaScript. Features custom cursor, loader animation, 3D rotating certification carousel, project modals, real email via Web3Forms, scroll reveal animations, and a fully responsive layout.',
+    tech:  ['HTML','CSS','JavaScript','Web3Forms','3D CSS Transforms'],
+    link:  'https://github.com/mukeshbala143/MUKESH-BALA-PORTFOLIO.git'
+  },
+  amazon: {
+    tag:   'Amazon ML Challenge',
+    title: 'Amazon Product Recommendation System',
+    short: 'ML model for Amazon product recommendation engine.',
+    long:  'Developed a machine learning recommendation system for Amazon products using collaborative filtering and deep learning techniques. The model analyzes user behavior and product attributes to suggest relevant products.',
+    tech:  ['Python','TensorFlow','Pandas','Scikit-learn','Data Analysis'],
+    link:  'https://github.com/mukeshbala143/AMAZON-PROJECT.git'
+  },
+  cartify: {
+    tag:   'E-Commerce Project',
+    title: 'Cartify – E-Commerce Platform',
+    short: 'Full-stack e-commerce web application.',
+    long:  'Cartify is a full-stack e-commerce web application where users can browse products, add items to cart, manage orders, and authenticate securely. Built with modern technologies to provide a smooth and responsive online shopping experience.',
+    tech:  ['React','Node.js','Express','MongoDB','JWT'],
+    link:  'https://github.com/mukeshbala143/Cartify.git'
   },
   cyraAnalytics: {
     tag:   'Analytics',
@@ -259,32 +267,7 @@ const projectData = {
     long:  'Comprehensive analytics platform with real-time charts, filterable data tables, and exportable reports. Designed for business intelligence and informed decision-making support.',
     tech:  ['Python','Flask','Chart.js','MySQL','Data Visualization'],
     link:  'https://github.com/mukeshbala143/Cyra-Analytics.git'
-  },
-  portfolio: {
-    tag:   'Mukesh Bala Portfolio',
-    title: 'My Portfolio Website',
-    short: 'This portfolio — dark luxury editorial design.',
-    long:  'Built from scratch with pure HTML, CSS & JavaScript. Features custom cursor, loader animation, 3D rotating certification carousel, project modals, real email via Web3Forms, scroll reveal animations, and a fully responsive layout.',
-    tech:  ['HTML','CSS','JavaScript','Web3Forms','3D CSS Transforms'],
-    link:  'https://github.com/mukeshbala143/MUKESH-BALA-PORTFOLIO.git'
-},
-  amazon: {
-    tag:   'Amazon ML Challenge',
-    title: 'Amazon Product Recommendation System',
-    short: 'ML model for Amazon product recommendation engine.',
-    long:  'Developed a machine learning recommendation system for Amazon products using collaborative filtering and deep learning techniques. The model analyzes user behavior and product attributes to suggest relevant products.',
-    tech:  ['Python','TensorFlow','Pandas','Scikit-learn','Data Analysis'],
-    link:  'https://github.com/mukeshbala143/AMAZON-PROJECT.git'
-},
-  cartify: {
-    tag:   'E-Commerce Project',
-    title: 'Cartify – E-Commerce Platform',
-    short: 'Full-stack e-commerce web application.',
-    long:  'Cartify is a full-stack e-commerce web application where users can browse products, add items to cart, manage orders, and authenticate securely. Built with modern technologies to provide a smooth and responsive online shopping experience.',
-    tech:  ['React','Node.js','Express','MongoDB','JWT'],
-    link:  'https://github.com/mukeshbala143/Cartify.git'
-}
-
+  }
 };
 
 const pModalOverlay = document.getElementById('pModalOverlay');
@@ -329,7 +312,7 @@ if (pModalOverlay) {
 
 
 /* ════════════════════════════════════════
-   7. 3D CAROUSEL
+   7. 3D CAROUSEL (Desktop only)
 ════════════════════════════════════════ */
 (function() {
   const container = document.getElementById('drag-container');
@@ -414,7 +397,7 @@ const certsData = [
     description:'Completed hands-on bootcamp building portfolio projects using React, modern UI practices, and component-based architecture.',
     technologies:['React','JavaScript','HTML','CSS'], linkedinUrl:'https://www.linkedin.com/posts/activity-7331945250313175041-5jTI?utm_source=share&utm_medium=member_desktop&rcm=ACoAADnzwmEBlPSGS1jS2pZ2OA4hy6uQAA6S4wE' },
 
-  { category:'HACKATHON', title:'Smart India Hackathon — Internal', provider:'GIET University', color:'#60a5fa',
+  { category:'HACKATHON', title:'Smart India Hackathon', provider:'GIET University', color:'#60a5fa',
     description:'Shortlisted among 40+ teams in the SIH Internal Round. Built innovative solutions, demonstrated strong problem-solving and teamwork under competitive conditions.',
     technologies:['Innovation','Teamwork','Problem Solving'], linkedinUrl:'https://www.linkedin.com/posts/sweta-panda-220920294_hackathon-teamwork-innovation-ugcPost-7236796244428218368-7nnq?utm_source=share&utm_medium=member_desktop&rcm=ACoAADnzwmEBlPSGS1jS2pZ2OA4hy6uQAA6S4wE' },
 
@@ -477,6 +460,10 @@ const certsData = [
   { category:'DESIGN & UX', title:'UX Design Foundations', provider:'Google (Coursera)', color:'#a3e635',
     description:'Google UX Design course covering user research, wireframing, prototyping, usability testing, accessibility, and the end-to-end user-centered design process.',
     technologies:['UX Design','User Research','Wireframing','Prototyping','Accessibility','Design Thinking'], linkedinUrl:'https://www.linkedin.com/posts/activity-7423773435803226113-WXix?utm_source=share&utm_medium=member_desktop&rcm=ACoAADnzwmEBlPSGS1jS2pZ2OA4hy6uQAA6S4wE' },
+
+  { category:'AI / ML', title:'AI-ML Virtual Internship', provider:'AICTE × Google for Developers × EduSkills', color:'#5f969f',
+    description:'Completed 10-week AICTE Virtual Internship in Artificial Intelligence & Machine Learning, supported by Google for Developers India Edu Program. Achieved Grade O (Outstanding: 90–100). Hosted at GIET University, January–March 2026.',
+    technologies:['Artificial Intelligence','Machine Learning','Python','Deep Learning','Google for Developers'], linkedinUrl:'https://www.linkedin.com/posts/activity-7438811853989969920-kOGn?utm_source=share&utm_medium=member_desktop&rcm=ACoAADnzwmEBlPSGS1jS2pZ2OA4hy6uQAA6S4wE' },
 ];
 
 function openCertModal(index) {
@@ -524,7 +511,6 @@ const cfError     = document.getElementById('cfError');
 const cfErrorMsg  = document.getElementById('cfErrorMsg');
 
 function showCfState(state) {
-  // state: 'idle' | 'loading' | 'success' | 'error'
   cfBtnText.style.display = state === 'loading' ? 'none'  : 'flex';
   cfBtnLoad.style.display = state === 'loading' ? 'flex'  : 'none';
   cfSuccess.style.display = state === 'success' ? 'flex'  : 'none';
@@ -552,11 +538,10 @@ if (contactForm) {
     const subject = document.getElementById('cfSubject')?.value.trim();
     const message = document.getElementById('cfMessage')?.value.trim();
 
-    // Validate
     let valid = true;
-    if (!name    || name.length < 2)    { markError('cfName');    valid = false; }
+    if (!name    || name.length < 2)      { markError('cfName');    valid = false; }
     if (!email   || !validateEmail(email)) { markError('cfEmail');   valid = false; }
-    if (!message || message.length < 10) { markError('cfMessage'); valid = false; }
+    if (!message || message.length < 10)  { markError('cfMessage'); valid = false; }
 
     if (!valid) {
       showCfState('error');
@@ -587,7 +572,6 @@ if (contactForm) {
       if (result.success) {
         showCfState('success');
         contactForm.reset();
-        // Reset to idle after 6s
         setTimeout(() => showCfState('idle'), 6000);
       } else {
         throw new Error(result.message || 'Submission failed');
@@ -622,6 +606,51 @@ document.addEventListener('keydown', e => {
     if (pmo) { pmo.classList.remove('open'); document.body.style.overflow = ''; }
   }
 });
+
+
+/* ════════════════════════════════════════
+   12. MOBILE CERT SWIPE CAROUSEL
+   Builds a horizontal swipe slider from certsData
+   Shown only on mobile (≤768px via CSS)
+════════════════════════════════════════ */
+(function buildMobileCerts() {
+  const wrap  = document.querySelector('.mobile-cert-track-wrap');
+  if (!wrap) return;
+
+  const track = wrap.querySelector('.mobile-cert-track');
+  const dots  = wrap.querySelector('.mobile-cert-dots');
+  if (!track || !dots) return;
+
+  certsData.forEach((d, i) => {
+    // Card
+    const card = document.createElement('div');
+    card.className = 'mobile-cert-card';
+    card.style.borderColor = d.color + '33';
+    card.innerHTML = `
+      <div class="gc-icon" style="border:1px solid ${d.color};color:${d.color};box-shadow:0 0 16px ${d.color}33;background:rgba(0,0,0,0.2);">
+        <i class="fas fa-star"></i>
+      </div>
+      <span class="gc-cat" style="color:${d.color};">${d.category}</span>
+      <h3>${d.title}</h3>
+      <p>${d.provider}</p>
+      <div class="gc-bar" style="background:${d.color};box-shadow:0 0 10px ${d.color};"></div>
+    `;
+    card.addEventListener('click', () => openCertModal(i));
+    track.appendChild(card);
+
+    // Dot
+    const dot = document.createElement('span');
+    if (i === 0) dot.classList.add('active');
+    dots.appendChild(dot);
+  });
+
+  // Update active dot on scroll
+  const dotEls = dots.querySelectorAll('span');
+  track.addEventListener('scroll', () => {
+    const idx = Math.round(track.scrollLeft / (track.scrollWidth / certsData.length));
+    dotEls.forEach((d, i) => d.classList.toggle('active', i === idx));
+  }, { passive: true });
+})();
 
 
 /* ════════════════════════════════════════
