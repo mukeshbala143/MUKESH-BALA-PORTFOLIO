@@ -239,10 +239,10 @@ const projectData = {
   portfolio: {
     tag:   'Mukesh Bala Portfolio',
     title: 'My Portfolio Website',
-    short: 'This portfolio — dark luxury editorial design.',
-    long:  'Built from scratch with pure HTML, CSS & JavaScript. Features custom cursor, loader animation, 3D rotating certification carousel, project modals, real email via Web3Forms, scroll reveal animations, and a fully responsive layout.',
-    tech:  ['HTML','CSS','JavaScript','Web3Forms','3D CSS Transforms'],
-    link:  'https://github.com/mukeshbala143/MUKESH-BALA-PORTFOLIO.git'
+    short: 'Responsive personal portfolio website.',
+    long:  'Personal portfolio showcasing projects, skills, achievements, and contact info with smooth animations and modern UI.',
+    tech:  ['HTML','CSS','JavaScript'],
+    link:  'https://github.com/mukeshbala143/portfolio_by_mukesh.git'
   },
   amazon: {
     tag:   'Amazon ML Challenge',
@@ -267,7 +267,23 @@ const projectData = {
     long:  'Comprehensive analytics platform with real-time charts, filterable data tables, and exportable reports. Designed for business intelligence and informed decision-making support.',
     tech:  ['Python','Flask','Chart.js','MySQL','Data Visualization'],
     link:  'https://github.com/mukeshbala143/Cyra-Analytics.git'
-  }
+  },
+  mukeshPortfolio: {
+  tag:   'Portfolio',
+  title: 'Mukesh Bala Portfolio',
+  short: 'This portfolio — dark luxury editorial design.',
+  long:  'Built from scratch with pure HTML, CSS & JavaScript. Features custom cursor, loader animation, 3D rotating certification carousel, project modals, real email via Web3Forms, scroll reveal animations, and a fully responsive layout.',
+  tech:  ['HTML','CSS','JavaScript','Web3Forms','3D CSS Transforms'],
+  link:  'https://github.com/mukeshbala143/MUKESH-BALA-PORTFOLIO.git' 
+},
+  auctionArena: {
+  tag:   'Live Multiplayer',
+  title: 'Auction Arena Platform',
+  short: 'Real-time sports auction platform with live bidding.',
+  long:  'A full-stack multiplayer sports auction platform (IPL, Kabaddi, Football). Features include live socket-based bidding, synchronized server-side timers to prevent desync, a female AI voice announcer for live bids, smart purse/overseas cap enforcement, and Gemini AI-powered post-auction squad analysis with Excel export.',
+  tech:  ['React', 'Node.js', 'Socket.io', 'Supabase', 'Tailwind CSS'],
+  link:  'https://auctionarena.org' 
+}
 };
 
 const pModalOverlay = document.getElementById('pModalOverlay');
